@@ -73,43 +73,47 @@
 </head>
 <body class="bg-darkbg text-gray-200 antialiased min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-darkbg/80 border-b border-gray-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <a href="#hero" class="flex items-center space-x-2 text-brand-400 font-mono font-bold text-lg hover:text-white transition">
-                    <span class="text-brand-500">&gt;</span>
-                    <span>Mohanad Qasim</span>
-                    <span class="animate-pulse text-brand-400">_</span>
-                </a>
+    <!-- // HEADER / NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand / Name Link (Resets URL cleanly to top) -->
+        <a href="#" class="text-cyan-400 font-mono font-bold text-lg hover:text-cyan-300 transition-colors flex items-center gap-2">
+            <span class="text-slate-500">&gt;</span> Mohanad Qasim <span class="animate-pulse">_</span>
+        </a>
 
-                <!-- Nav Items -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#about" class="text-gray-300 hover:text-brand-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-user text-xs"></i> About</a>
-                    <a href="#skills" class="text-gray-300 hover:text-brand-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-microchip text-xs"></i> Skills Matrix</a>
-                    <a href="#projects" class="text-gray-300 hover:text-brand-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-diagram-project text-xs"></i> CI/CD Projects</a>
-                    <a href="#aws-guide" class="text-brand-400 border border-brand-500/30 bg-brand-500/10 hover:bg-brand-500/20 px-3 py-1.5 rounded-lg transition-all text-xs font-mono flex items-center gap-2">
-                        <i class="fa-brands fa-aws text-brand-aws text-sm"></i> EC2 Deployment Specs
-                    </a>
-                    <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-lg text-xs font-medium transition shadow-lg shadow-brand-600/20">Contact Me</a>
-                </nav>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-xs font-mono">
+            <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-user text-slate-400"></i> About
+            </a>
+            <a href="#certifications" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-award text-amber-400"></i> Certifications
+            </a>
+            <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-microchip text-slate-400"></i> Skills Matrix
+            </a>
+            <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-diagram-project text-slate-400"></i> CI/CD Projects
+            </a>
+            <a href="./Mohanad-Qasim-CV.pdf" download="Mohanad-Qasim-DevOps-CV.pdf" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-file-pdf text-red-400"></i> Resume
+            </a>
 
-                <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-            </div>
+            <!-- AWS Architecture Button -->
+            <a href="#aws-guide" class="text-amber-400 border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-1.5 rounded-lg transition-all flex items-center gap-2">
+            <i class="fa-brands fa-aws text-amber-500 text-sm"></i> AWS Architecture Specs
+            </a>
+
+            <!-- Contact Button -->
+            <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2 rounded-lg transition-all shadow-lg shadow-cyan-500/20">
+            Contact Me
+            </a>
+        </nav>
+
         </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-800 bg-cardbg px-4 pt-2 pb-4 space-y-2">
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
-            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">Skills Matrix</a>
-            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">CI/CD Projects</a>
-            <a href="#aws-guide" class="block px-3 py-2 rounded-md text-base font-medium text-brand-400 hover:bg-gray-800">AWS Deployment Specs</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-brand-600 text-white text-center">Contact Me</a>
-        </div>
+    </div>
     </header>
 
     <main class="flex-grow">
@@ -152,7 +156,9 @@
                             <span class="text-gray-700">•</span>
                             <span class="flex items-center gap-1.5"><i class="fa-brands fa-docker text-blue-400 text-sm"></i> Docker</span>
                             <span class="text-gray-700">•</span>
-                            <span class="flex items-center gap-1.5"><i class="fa-brands fa-github text-white text-sm"></i> GitHub Actions</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-cubes text-purple-400 text-sm"></i> Terraform</span>
+                            <span class="text-gray-700">•</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-diagram-project text-amber-500 text-sm"></i> AWS CodePipeline</span>
                             <span class="text-gray-700">•</span>
                             <span class="flex items-center gap-1.5"><i class="fa-brands fa-js text-yellow-400 text-sm"></i> HTML/CSS/JS</span>
                         </div>
@@ -197,157 +203,187 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-16 border-b border-gray-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- // INTRODUCTION SECTION HEADER -->
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-cyan-400 text-xs font-mono tracking-widest uppercase">// INTRODUCTION</span>
-                <h2 class="text-3xl font-bold text-white mt-2">About Me & Vision</h2>
-                
-                <p class="text-slate-300 text-base leading-relaxed mt-4">
-                    Backed by an engineering background and a strong suite of AWS certifications, I bridge complex infrastructure support with modern DevOps automation[cite: 2, 3]. My focus centers on building resilient cloud environments, implementing Infrastructure as Code with Terraform, and delivering seamless CI/CD pipelines through hands-on deployment labs[cite: 2].
+        <!-- ========================================== -->
+        <!-- 1. ABOUT ME & VISION SECTION               -->
+        <!-- ========================================== -->
+        <section id="about" class="py-20 border-t border-slate-800/80 bg-slate-950/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-cyan-400 text-xs font-mono tracking-widest uppercase">// INTRODUCTION</span>
+            <h2 class="text-3xl font-bold text-white mt-2">About Me & Vision</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                Backed by an electrical engineering background and a strong suite of 5 cloud certifications, I bridge complex infrastructure support with modern DevOps automation. My focus centers on building resilient cloud environments, implementing Infrastructure as Code with Terraform, and delivering seamless AWS-native CI/CD pipelines through hands-on deployment labs.
+            </p>
+            </div>
+
+            <!-- 3 Core Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 01 -->
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-6 transition-all duration-300">
+                <span class="text-cyan-400 text-xs font-mono">01 / ARCHITECTURE</span>
+                <h3 class="text-xl font-bold text-white mt-2">AWS & Cloud Infrastructure</h3>
+                <p class="text-slate-400 text-xs leading-relaxed mt-3">
+                Designing secure, scalable AWS environments using EC2, S3, IAM, and custom automated VPC networks with Terraform.
+                </p>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-6 transition-all duration-300">
+                <span class="text-cyan-400 text-xs font-mono">02 / AUTOMATION</span>
+                <h3 class="text-xl font-bold text-white mt-2">CI/CD & Containerization</h3>
+                <p class="text-slate-400 text-xs leading-relaxed mt-3">
+                Building AWS-native pipelines (CodeCommit → CodePipeline → CodeBuild) to build, test, and auto-deploy containerized applications with Docker and Amazon ECR.
+                </p>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-6 transition-all duration-300">
+                <span class="text-cyan-400 text-xs font-mono">03 / PROACTIVE OPS</span>
+                <h3 class="text-xl font-bold text-white mt-2">Root Cause & Infrastructure</h3>
+                <p class="text-slate-400 text-xs leading-relaxed mt-3">
+                Combining deep technical troubleshooting experience with Amazon CloudWatch monitoring, automated health checks, and log analysis.
+                </p>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 2. CERTIFICATIONS SECTION (SORTED)         -->
+        <!-- ========================================== -->
+        <section id="certifications" class="py-20 border-t border-slate-800/80 bg-slate-950/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-400 text-xs font-mono tracking-widest uppercase">// VERIFIED CREDENTIALS</span>
+            <h2 class="text-3xl font-bold text-white mt-2">Certifications & Validations</h2>
+            <p class="text-slate-400 text-sm mt-2">Official certifications ordered by expertise level (Foundational → Associate)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- 1. Foundational: AWS Certified Cloud Practitioner -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-mono uppercase">Foundational Level</span>
+                    <i class="fa-brands fa-aws text-amber-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                    AWS Certified Cloud Practitioner
+                </h3>
+                <p class="text-slate-400 text-xs mt-2">
+                    Validates overall understanding of AWS Cloud platform, basic security, architectural principles, and cloud economics.
                 </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <!-- Card 1 -->
-                <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-5 text-left">
-                    <div class="text-amber-500 font-mono text-xs mb-1">01 / ARCHITECTURE</div>
-                    <h4 class="text-white font-bold mb-1">AWS & Cloud Infrastructure</h4>
-                    <p class="text-slate-400 text-xs leading-normal">Designing secure, scalable AWS environments using EC2, S3, IAM, and automated VPC networks[cite: 2].</p>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-slate-500">AWS Credential</span>
+                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-amber-400 hover:underline flex items-center gap-1">
+                    <span>Verify Badge</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
                 </div>
+            </div>
 
-                <!-- Card 2 -->
-                <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-5 text-left">
-                    <div class="text-cyan-400 font-mono text-xs mb-1">02 / AUTOMATION</div>
-                    <h4 class="text-white font-bold mb-1">CI/CD & Containerization</h4>
-                    <p class="text-slate-400 text-xs leading-normal">Building GitHub Actions pipelines to build, test, and auto-deploy containerized applications with Docker & Kubernetes[cite: 2].</p>
+            <!-- 2. Foundational: OCI Foundations Associate -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-red-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-mono uppercase">Foundational Level</span>
+                    <i class="fa-solid fa-cloud text-red-400 text-xl"></i>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-5 text-left">
-                    <div class="text-emerald-400 font-mono text-xs mb-1">03 / PROACTIVE OPS</div>
-                    <h4 class="text-white font-bold mb-1">Root Cause & Infrastructure</h4>
-                    <p class="text-slate-400 text-xs leading-normal">Combining deep troubleshooting experience with Prometheus, Grafana, and CloudWatch monitoring[cite: 2, 3].</p>
+                <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">
+                    Oracle Cloud Infrastructure Foundations Associate
+                </h3>
+                <p class="text-slate-400 text-xs mt-2">
+                    Validates foundational knowledge of Oracle Cloud Infrastructure core services, IAM, security, and cloud concepts.
+                </p>
                 </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-slate-500">OCI Credential</span>
+                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-red-400 hover:underline flex items-center gap-1">
+                    <span>Verify Badge</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
                 </div>
-                <!-- // CERTIFICATIONS SECTION -->
-                <div class="mt-12">
-                <div class="text-center mb-8">
-                    <span class="text-cyan-400 text-xs font-mono tracking-widest uppercase">// CREDENTIALS</span>
-                    <h3 class="text-2xl font-bold text-white mt-1">Verified Certifications</h3>
-                    <p class="text-slate-400 text-sm mt-1">Click any badge to view the official verification link</p>
+            </div>
+
+            <!-- 3. Associate: AWS Certified Solutions Architect - Associate -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-mono uppercase">Associate Level</span>
+                    <i class="fa-brands fa-aws text-cyan-400 text-2xl"></i>
                 </div>
-
-                <!-- Certifications Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <!-- AWS Solutions Architect Associate -->
-                    <a href="https://www.credly.com/badges/0b0f3e48-90b8-48e6-8980-e07211ce9367/linked_in_profile" target="_blank" rel="noopener noreferrer" 
-                    class="group bg-slate-900/60 border border-slate-800 hover:border-amber-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center p-2">
-                            <svg class="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.75 11.25a2.25 2.25 0 0 0-2.25 2.25v2.25a2.25 2.25 0 0 0 2.25 2.25 2.25 2.25 0 0 0 2.25-2.25v-2.25a2.25 2.25 0 0 0-2.25-2.25zM12 2.25a2.25 2.25 0 0 0-2.25 2.25v2.25a2.25 2.25 0 0 0 2.25 2.25 2.25 2.25 0 0 0 2.25-2.25V4.5A2.25 2.25 0 0 0 12 2.25zM5.25 11.25a2.25 2.25 0 0 0-2.25 2.25v2.25a2.25 2.25 0 0 0 2.25 2.25 2.25 2.25 0 0 0 2.25-2.25v-2.25a2.25 2.25 0 0 0-2.25-2.25z"/>
-                            </svg>
-                        </div>
-                        <span class="text-xs font-mono bg-amber-500/10 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/20">Associate</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">AWS Certified Solutions Architect</h4>
-                        <p class="text-xs text-slate-400 mt-1">Amazon Web Services</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-200">
-                        <span>Verify Credly Badge</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </div>
-                    </a>
-
-                    <!-- AWS SysOps Administrator Associate -->
-                    <a href="https://www.credly.com/badges/8db272a3-9016-435b-b061-ced3f3d42e73/linked_in" target="_blank" rel="noopener noreferrer" 
-                    class="group bg-slate-900/60 border border-slate-800 hover:border-amber-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center p-2">
-                            <svg class="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8s0 0 0 0z"/>
-                            </svg>
-                        </div>
-                        <span class="text-xs font-mono bg-amber-500/10 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/20">Associate</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">AWS Certified SysOps Administrator</h4>
-                        <p class="text-xs text-slate-400 mt-1">Amazon Web Services</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-200">
-                        <span>Verify Credly Badge</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </div>
-                    </a>
-
-                    <!-- AWS Certified Developer Associate -->
-                    <a href="https://www.credly.com/badges/3190a922-6f7d-428e-a5d8-20d997c17202/linked_in_profile" target="_blank" rel="noopener noreferrer" 
-                    class="group bg-slate-900/60 border border-slate-800 hover:border-amber-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center p-2">
-                            <svg class="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                            </svg>
-                        </div>
-                        <span class="text-xs font-mono bg-amber-500/10 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/20">Associate</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">AWS Certified Developer</h4>
-                        <p class="text-xs text-slate-400 mt-1">Amazon Web Services</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-200">
-                        <span>Verify Credly Badge</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </div>
-                    </a>
-
-                    <!-- AWS Cloud Practitioner -->
-                    <a href="https://www.credly.com/badges/a4667cbd-5928-409b-9256-2c3fd6c3c59f/linked_in_profile" target="_blank" rel="noopener noreferrer" 
-                    class="group bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center p-2">
-                            <svg class="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
-                            </svg>
-                        </div>
-                        <span class="text-xs font-mono bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded-full border border-cyan-500/20">Foundational</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">AWS Certified Cloud Practitioner</h4>
-                        <p class="text-xs text-slate-400 mt-1">Amazon Web Services</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-200">
-                        <span>Verify Credly Badge</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </div>
-                    </a>
-
-                    <!-- Oracle Cloud Infrastructure -->
-                    <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=F8DFA3F247F0432C98ADE6981A58BB7E6E0793E27984EDBEB0E3E5A9074AA914" target="_blank" rel="noopener noreferrer" 
-                    class="group bg-slate-900/60 border border-slate-800 hover:border-red-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-500/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center p-2">
-                            <span class="text-red-500 font-bold text-xs tracking-tighter">ORA</span>
-                        </div>
-                        <span class="text-xs font-mono bg-red-500/10 text-red-400 px-2.5 py-1 rounded-full border border-red-500/20">Foundations</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">OCI 2023 Certified Foundations Associate</h4>
-                        <p class="text-xs text-slate-400 mt-1">Oracle Cloud Infrastructure</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-200">
-                        <span>Verify Oracle Badge</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </div>
-                    </a>
-
+                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    AWS Certified Solutions Architect – Associate
+                </h3>
+                <p class="text-slate-400 text-xs mt-2">
+                    Demonstrates expertise in designing well-architected distributed systems on AWS that are scalable, resilient, and secure.
+                </p>
                 </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-slate-500">AWS Credential</span>
+                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                    <span>Verify Badge</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
                 </div>
-                            </div>
+            </div>
+
+            <!-- 4. Associate: AWS Certified SysOps Administrator - Associate -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-mono uppercase">Associate Level</span>
+                    <i class="fa-brands fa-aws text-cyan-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    AWS Certified SysOps Administrator – Associate
+                </h3>
+                <p class="text-slate-400 text-xs mt-2">
+                    Validates technical expertise in deployment, management, security, and operations on AWS, including monitoring and troubleshooting.
+                </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-slate-500">AWS Credential</span>
+                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                    <span>Verify Badge</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+                </div>
+            </div>
+
+            <!-- 5. Associate: AWS Certified Developer - Associate -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-mono uppercase">Associate Level</span>
+                    <i class="fa-brands fa-aws text-cyan-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    AWS Certified Developer – Associate
+                </h3>
+                <p class="text-slate-400 text-xs mt-2">
+                    Demonstrates proficiency in developing, deploying, and debugging cloud-based applications using AWS core services.
+                </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-slate-500">AWS Credential</span>
+                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                    <span>Verify Badge</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
         </section>
 
         <!-- Skills Matrix -->
@@ -449,45 +485,204 @@
         </section>
 
         <!-- Projects Showcase Section -->
-        <section id="projects" class="py-16 border-b border-gray-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-10">
-                    <h2 class="text-xs font-mono font-semibold text-brand-400 uppercase tracking-widest mb-2">// Portfolio Projects</h2>
-                    <h3 class="text-3xl font-bold text-white">CI/CD & Cloud Showcase</h3>
+        <section id="projects" class="py-20 border-t border-slate-800/80 bg-slate-950/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-cyan-400 text-xs font-mono tracking-widest uppercase">// Portfolio Projects</span>
+            <h2 class="text-3xl font-bold text-white mt-2">CI/CD & Cloud Showcase</h2>
+            <p class="text-slate-400 text-sm mt-2">Hands-on automated infrastructure, containerized deployments, and cloud architectures</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Single Card: AWS CodePipeline & Terraform Infrastructure -->
+            <div class="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 flex flex-col justify-between group">
+                <div>
+                <!-- Status Badge -->
+                <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Live on EC2
+                    </span>
+                    <span class="text-xs font-mono text-slate-500">v1.0.0</span>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project 1 -->
-                    <div class="bg-cardbg border border-cardborder rounded-xl p-6 flex flex-col justify-between glow-card transition-all">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
-                                    AWS EC2 Live
-                                </span>
-                                <i class="fa-brands fa-github text-gray-400 text-xl"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-white mb-2">AWS EC2 Portfolio Deployment</h4>
-                            <p class="text-gray-400 text-sm mb-4">
-                                Automated continuous deployment of this web portfolio to AWS EC2 using GitHub Actions and Nginx.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-gray-800 text-xs text-brand-400 font-mono">
-                            GitHub Actions → AWS EC2 → Nginx
-                        </div>
+                <!-- Project Title & Short Description -->
+                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    Automated AWS Portfolio Engine
+                </h3>
+                <p class="text-slate-400 text-xs leading-relaxed mt-2.5">
+                    100% AWS-native CI/CD portfolio pipeline. Provisioned with Terraform (VPC, Security Groups, EC2, ECR, CodeCommit, CodePipeline) to automatically build, package, and deploy this site inside a Docker container on code push.
+                </p>
+
+                <!-- Compact Pipeline Flow -->
+                <div class="mt-5 pt-4 border-t border-slate-800/80">
+                    <div class="text-[11px] font-mono text-slate-400 mb-2">// PIPELINE ARCHITECTURE</div>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                    <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">CodeCommit</span>
+                    <span class="text-slate-500">→</span>
+                    <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">CodePipeline</span>
+                    <span class="text-slate-500">→</span>
+                    <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">CodeBuild</span>
+                    <span class="text-slate-500">→</span>
+                    <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">ECR</span>
+                    <span class="text-slate-500">→</span>
+                    <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">EC2</span>
                     </div>
                 </div>
+                </div>
+
+                <!-- Tech Stack Tags & Link -->
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-0.5 rounded text-[10px] font-mono">Terraform</span>
+                    <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded text-[10px] font-mono">Docker</span>
+                    <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded text-[10px] font-mono">AWS</span>
+                </div>
+                <a href="http://54.156.68.53" target="_blank" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>View Live</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                </div>
             </div>
+
+            </div>
+        </div>
         </section>
 
         <!-- AWS Setup Guide Section -->
-        <section id="aws-guide" class="py-16 border-b border-gray-800/60 bg-slate-950/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                    <i class="fa-brands fa-aws text-brand-aws text-4xl mb-3"></i>
-                    <h3 class="text-3xl font-bold text-white">AWS Deployment Roadmap</h3>
-                    <p class="text-gray-400 mt-2 text-sm">We will connect this repository to AWS EC2 using GitHub Actions in our upcoming steps.</p>
+        <!-- // AWS INFRASTRUCTURE & LIVE DEPLOYMENT SPECS -->
+        <section id="aws-guide" class="py-20 border-t border-slate-800/80 bg-slate-950/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-500 text-xs font-mono tracking-widest uppercase">// LIVE DEPLOYMENT SPECS</span>
+            <h2 class="text-3xl font-bold text-white mt-2">AWS Native Infrastructure</h2>
+            <p class="text-slate-400 text-sm mt-2">Real-time status and architectural blueprint of this self-deploying cloud environment</p>
+            </div>
+
+            <!-- Top Key Metrics Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            
+            <!-- Metric 1: EC2 Host -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+                <div class="p-2.5 bg-amber-500/10 border border-amber-500/20 rounded-lg text-amber-500">
+                <i class="fa-brands fa-aws text-xl"></i>
+                </div>
+                <div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase">Compute Instance</div>
+                <div class="text-sm font-bold text-white font-mono">EC2 (t2.micro)</div>
+                <div class="text-[10px] font-mono text-emerald-400">IP: 54.156.68.53</div>
                 </div>
             </div>
+
+            <!-- Metric 2: Docker Container -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+                <div class="p-2.5 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400">
+                <i class="fa-brands fa-docker text-xl"></i>
+                </div>
+                <div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase">Container Runtime</div>
+                <div class="text-sm font-bold text-white font-mono">Nginx Alpine</div>
+                <div class="text-[10px] font-mono text-cyan-400">Port 80 Bound</div>
+                </div>
+            </div>
+
+            <!-- Metric 3: IaC Engine -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+                <div class="p-2.5 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400">
+                <i class="fa-solid fa-code-branch text-xl"></i>
+                </div>
+                <div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase">Provisioning Engine</div>
+                <div class="text-sm font-bold text-white font-mono">Terraform 1.0+</div>
+                <div class="text-[10px] font-mono text-slate-400">13 Resources Active</div>
+                </div>
+            </div>
+
+            <!-- Metric 4: CI/CD Pipeline Status -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+                <div class="p-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400">
+                <i class="fa-solid fa-circle-check text-xl"></i>
+                </div>
+                <div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase">Pipeline Status</div>
+                <div class="text-sm font-bold text-white font-mono">CodePipeline</div>
+                <div class="text-[10px] font-mono text-emerald-400">Auto-Sync Active</div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Live Architecture Workflow Map -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                <div class="flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="text-xs font-mono text-white font-bold uppercase tracking-wider">Automated Deployment Workflow</span>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Region: us-east-1</span>
+            </div>
+
+            <!-- Step-by-Step Flow Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 font-mono text-xs text-center items-center">
+                
+                <!-- Step 1 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+                <span class="text-amber-500 font-bold text-[10px] mb-1">01. SOURCE</span>
+                <span class="text-white font-bold">AWS CodeCommit</span>
+                <span class="text-[10px] text-slate-500 mt-1">Git Repository</span>
+                </div>
+
+                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
+
+                <!-- Step 2 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+                <span class="text-amber-500 font-bold text-[10px] mb-1">02. TRIGGER</span>
+                <span class="text-white font-bold">AWS CodePipeline</span>
+                <span class="text-[10px] text-slate-500 mt-1">Auto Orchestration</span>
+                </div>
+
+                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
+
+                <!-- Step 3 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+                <span class="text-amber-500 font-bold text-[10px] mb-1">03. BUILD</span>
+                <span class="text-white font-bold">AWS CodeBuild</span>
+                <span class="text-[10px] text-slate-500 mt-1">Docker Image Build</span>
+                </div>
+
+            </div>
+
+            <!-- Arrow Down -->
+            <div class="my-3 text-center text-cyan-400 text-lg">⬇</div>
+
+            <!-- Bottom Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-xs text-center items-center max-w-2xl mx-auto">
+                
+                <!-- Step 4 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+                <span class="text-amber-500 font-bold text-[10px] mb-1">04. REGISTRY</span>
+                <span class="text-white font-bold">Amazon ECR</span>
+                <span class="text-[10px] text-slate-500 mt-1">Image Tagging & Scan</span>
+                </div>
+
+                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
+
+                <!-- Step 5 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-amber-500/40 bg-amber-500/5 flex flex-col items-center shadow-lg shadow-amber-500/5">
+                <span class="text-amber-400 font-bold text-[10px] mb-1">05. DEPLOY</span>
+                <span class="text-amber-300 font-bold">AWS EC2 Server</span>
+                <span class="text-[10px] text-amber-400/80 mt-1">Auto Pull & Run Port 80</span>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
         </section>
 
         <!-- Contact Section -->

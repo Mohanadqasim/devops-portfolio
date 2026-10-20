@@ -1,15 +1,42 @@
-# Terraform generated local files
-**/.terraform/
+# ==========================================
+# 1. TERRAFORM STATE & CACHE (CRITICAL)
+# ==========================================
+# Local .terraform directory (cached providers & modules)
+.terraform/
+
+# Terraform state files (contains plain-text account data)
 *.tfstate
 *.tfstate.*
+*.tfstate.backup
+
+# State lock files
+.terraform.tfstate.lock.info
+
+# Ignore sensitive variable inputs
 *.tfvars
 *.tfvars.json
-.terraform.lock.hcl
-*.tfplan
-crash.log
 
-# OS & Editor cache files
+# ==========================================
+# 2. OS & WINDOWS METADATA
+# ==========================================
+# Windows Zone Identifier metadata files
+*Zone.Identifier
+
+# Mac / Windows system files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ==========================================
+# 3. EDITOR & IDE CONFIGURATIONS
+# ==========================================
 .vscode/
 .idea/
+
+# ==========================================
+# 4. SENSITIVE KEYS & CREDENTIALS
+# ==========================================
+*.pem
+*.key
+*.crt
+.env
