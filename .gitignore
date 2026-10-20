@@ -1,0 +1,15 @@
+# Terraform generated local files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+*.tfplan
+crash.log
+
+# OS & Editor cache files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
