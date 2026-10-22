@@ -1,0 +1,46 @@
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Logging in to Amazon ECR..."
+      - export IMAGE_TAG="$(echo "$CODEBUILD_RESOLVED_SOURCE_VERSION" | cut -c 1-12)-${CODEBUILD_BUILD_NUMBER}"
+      - export IMAGE_URI="$ECR_REPOSITORY_URI:$IMAGE_TAG"
+      - aws ecr get-login-password --region "$AWS_DEFAULT_REGION" | docker login --username AWS --password-stdin "$ECR_REGISTRY"
+
+  build:
+    commands:
+      - echo "Building Docker image..."
+      - docker build -t "$IMAGE_URI" .
+
+  post_build:
+    commands:
+      # Stop deployment if the Docker build failed
+      - |
+        if [ "$CODEBUILD_BUILD_SUCCEEDING" != "1" ]; then
+          echo "Docker build failed. Skipping deployment."
+          exit 1
+        fi
+
+      - echo "Pushing Docker image to ECR..."
+      - docker push "$IMAGE_URI"
+
+      - echo "Triggering deployment through AWS SSM..."
+      - |
+        COMMAND_ID=$(aws ssm send-command \
+          --instance-ids "$EC2_INSTANCE_ID" \
+          --document-name "AWS-RunShellScript" \
+          --comment "Deploy portfolio image $IMAGE_TAG" \
+          --parameters "{\"commands\":[\"AWS_REGION=$AWS_DEFAULT_REGION ECR_REPOSITORY_URI=$ECR_REPOSITORY_URI IMAGE_TAG=$IMAGE_TAG /usr/local/bin/deploy-portfolio.sh\"]}" \
+          --query "Command.CommandId" \
+          --output text)
+
+        echo "SSM Command ID: $COMMAND_ID"
+
+        echo "Waiting for deployment to finish..."
+        aws ssm wait command-executed \
+          --command-id "$COMMAND_ID" \
+          --instance-id "$EC2_INSTANCE_ID"
+
+        echo "Deployment completed successfully!"

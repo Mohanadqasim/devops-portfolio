@@ -8,6 +8,10 @@
 *.tfstate
 *.tfstate.*
 *.tfstate.backup
+# Terraform saved plans
+tfplan
+*.tfplan
+*.tfplan.*
 
 # State lock files
 .terraform.tfstate.lock.info
