@@ -44,3 +44,17 @@ desktop.ini
 *.key
 *.crt
 .env
+
+# Terraform state
+**/*.tfstate
+**/*.tfstate.*
+**/.terraform/
+**/tfplan
+**/tfplan.*
+
+# Terraform sensitive files
+**/*.tfvars
+**/*.tfvars.json
+
+# Generated binaries
+a.out
