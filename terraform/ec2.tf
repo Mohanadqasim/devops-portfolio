@@ -21,7 +21,10 @@ resource "aws_instance" "portfolio" {
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.portfolio.id]
   lifecycle {
-    ignore_changes = [ami]
+    ignore_changes = [
+      ami,
+      user_data
+    ]
   }
 
   # Attach the IAM role for SSM and ECR access
