@@ -1,0 +1,85 @@
+
+#!/bin/bash
+set -euxo pipefail
+
+dnf install -y docker nginx certbot python3-certbot-nginx curl
+
+systemctl enable --now docker
+systemctl enable --now amazon-ssm-agent
+
+# Install deployment script
+cat > /usr/local/bin/deploy-portfolio.sh <<'DEPLOY_SCRIPT'
+${deploy_script}
+DEPLOY_SCRIPT
+
+chmod +x /usr/local/bin/deploy-portfolio.sh
+
+# Initial HTTP configuration for Let's Encrypt validation
+cat > /etc/nginx/conf.d/portfolio.conf <<'NGINX_CONF'
+server {
+    listen 80;
+    server_name ${domain_name} www.${domain_name};
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+NGINX_CONF
+
+nginx -t
+systemctl enable --now nginx
+
+# Certificate setup script
+cat > /usr/local/bin/setup-portfolio-https.sh <<'HTTPS_SCRIPT'
+#!/bin/bash
+set -euo pipefail
+
+DOMAIN="${domain_name}"
+
+# Retry while Route 53 DNS records propagate
+for attempt in $(seq 1 30); do
+    if certbot --nginx \
+        --non-interactive \
+        --agree-tos \
+        --register-unsafely-without-email \
+        --redirect \
+        -d "$DOMAIN" \
+        -d "www.$DOMAIN"; then
+
+        echo "HTTPS configured successfully."
+        exit 0
+    fi
+
+    echo "Certificate attempt $attempt failed. Retrying..."
+    sleep 120
+done
+
+echo "ERROR: HTTPS certificate setup failed."
+exit 1
+HTTPS_SCRIPT
+
+chmod +x /usr/local/bin/setup-portfolio-https.sh
+
+# Run certificate setup asynchronously after boot
+cat > /etc/systemd/system/portfolio-https.service <<'SERVICE'
+[Unit]
+Description=Configure portfolio HTTPS certificate
+Wants=network-online.target
+After=network-online.target nginx.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/setup-portfolio-https.sh
+
+[Install]
+WantedBy=multi-user.target
+SERVICE
+
+systemctl daemon-reload
+systemctl enable --now --no-block portfolio-https.service
+
+echo "EC2 initialization completed."
