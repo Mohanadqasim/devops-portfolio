@@ -97,8 +97,16 @@
             <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
             <i class="fa-solid fa-diagram-project text-slate-400"></i> CI/CD Projects
             </a>
-            <a href="./Mohanad-Qasim-CV.pdf" download="Mohanad-Qasim-DevOps-CV.pdf" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
-            <i class="fa-solid fa-file-pdf text-red-400"></i> Resume
+            <a href="/Mohanad-Qasim-CV.pdf"
+            download="Mohanad-Qasim-DevOps-CV.pdf"
+            type="application/pdf"
+            aria-label="Download Mohanad Qasim Resume"
+            class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+
+                <i class="fa-solid fa-file-pdf text-red-400"></i>
+                Resume
+
+                <i class="fa-solid fa-download text-[10px] ml-1"></i>
             </a>
 
             <!-- AWS Architecture Button -->
@@ -283,7 +291,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-500">AWS Credential</span>
-                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-amber-400 hover:underline flex items-center gap-1">
+                <a href="https://www.credly.com/badges/a4667cbd-5928-409b-9256-2c3fd6c3c59f/" target="_blank" class="text-xs font-mono text-amber-400 hover:underline flex items-center gap-1">
                     <span>Verify Badge</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -306,7 +314,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-500">OCI Credential</span>
-                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-red-400 hover:underline flex items-center gap-1">
+                <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=F8DFA3F247F0432C98ADE6981A58BB7E6E0793E27984EDBEB0E3E5A9074AA914" target="_blank" class="text-xs font-mono text-red-400 hover:underline flex items-center gap-1">
                     <span>Verify Badge</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -329,7 +337,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-500">AWS Credential</span>
-                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                <a href="https://www.credly.com/badges/0b0f3e48-90b8-48e6-8980-e07211ce9367/" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
                     <span>Verify Badge</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -352,7 +360,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-500">AWS Credential</span>
-                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                <a href="https://www.credly.com/badges/8db272a3-9016-435b-b061-ced3f3d42e73/" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
                     <span>Verify Badge</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -375,7 +383,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-500">AWS Credential</span>
-                <a href="https://www.credly.com" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
+                <a href="https://www.credly.com/badges/3190a922-6f7d-428e-a5d8-20d997c17202/" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1">
                     <span>Verify Badge</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -552,138 +560,402 @@
         </div>
         </section>
 
-        <!-- AWS Setup Guide Section -->
-        <!-- // AWS INFRASTRUCTURE & LIVE DEPLOYMENT SPECS -->
-        <section id="aws-guide" class="py-20 border-t border-slate-800/80 bg-slate-950/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-amber-500 text-xs font-mono tracking-widest uppercase">// LIVE DEPLOYMENT SPECS</span>
-            <h2 class="text-3xl font-bold text-white mt-2">AWS Native Infrastructure</h2>
-            <p class="text-slate-400 text-sm mt-2">Real-time status and architectural blueprint of this self-deploying cloud environment</p>
-            </div>
 
-            <!-- Top Key Metrics Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            
-            <!-- Metric 1: EC2 Host -->
+<!-- ========================================== -->
+<!-- AWS INFRASTRUCTURE & DEPLOYMENT WORKFLOW   -->
+<!-- ========================================== -->
+
+<section id="aws-guide" class="py-20 border-t border-slate-800/80 bg-slate-950/80">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- ========================================== -->
+        <!-- SECTION HEADER                             -->
+        <!-- ========================================== -->
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+
+            <span class="text-amber-500 text-xs font-mono tracking-widest uppercase">
+                // AWS DEPLOYMENT SPECS
+            </span>
+
+            <h2 class="text-3xl font-bold text-white mt-2">
+                AWS Native Infrastructure
+            </h2>
+
+            <p class="text-slate-400 text-sm mt-2">
+                Terraform-provisioned infrastructure with automated Docker
+                deployments through GitHub and AWS CodeBuild.
+            </p>
+
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- TOP INFRASTRUCTURE CARDS                   -->
+        <!-- ========================================== -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+
+
+            <!-- CARD 1: EC2 -->
             <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+
                 <div class="p-2.5 bg-amber-500/10 border border-amber-500/20 rounded-lg text-amber-500">
-                <i class="fa-brands fa-aws text-xl"></i>
+                    <i class="fa-brands fa-aws text-xl"></i>
                 </div>
+
                 <div>
-                <div class="text-[10px] font-mono text-slate-400 uppercase">Compute Instance</div>
-                <div class="text-sm font-bold text-white font-mono">EC2 (t2.micro)</div>
-                <div class="text-[10px] font-mono text-emerald-400">IP: 54.156.68.53</div>
+                    <div class="text-[10px] font-mono text-slate-400 uppercase">
+                        Compute Instance
+                    </div>
+
+                    <div class="text-sm font-bold text-white font-mono">
+                        EC2 (t2.micro)
+                    </div>
+
+                    <div class="text-[10px] font-mono text-emerald-400">
+                        Elastic IP: 184.196.172.2
+                    </div>
                 </div>
+
             </div>
 
-            <!-- Metric 2: Docker Container -->
+
+            <!-- CARD 2: DOCKER -->
             <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+
                 <div class="p-2.5 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400">
-                <i class="fa-brands fa-docker text-xl"></i>
+                    <i class="fa-brands fa-docker text-xl"></i>
                 </div>
+
                 <div>
-                <div class="text-[10px] font-mono text-slate-400 uppercase">Container Runtime</div>
-                <div class="text-sm font-bold text-white font-mono">Nginx Alpine</div>
-                <div class="text-[10px] font-mono text-cyan-400">Port 80 Bound</div>
+                    <div class="text-[10px] font-mono text-slate-400 uppercase">
+                        Container Runtime
+                    </div>
+
+                    <div class="text-sm font-bold text-white font-mono">
+                        Docker + Nginx Alpine
+                    </div>
+
+                    <div class="text-[10px] font-mono text-cyan-400">
+                        Localhost:8080 → Port 80
+                    </div>
                 </div>
+
             </div>
 
-            <!-- Metric 3: IaC Engine -->
+
+            <!-- CARD 3: TERRAFORM -->
             <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+
                 <div class="p-2.5 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400">
-                <i class="fa-solid fa-code-branch text-xl"></i>
+                    <i class="fa-solid fa-code-branch text-xl"></i>
                 </div>
+
                 <div>
-                <div class="text-[10px] font-mono text-slate-400 uppercase">Provisioning Engine</div>
-                <div class="text-sm font-bold text-white font-mono">Terraform 1.0+</div>
-                <div class="text-[10px] font-mono text-slate-400">13 Resources Active</div>
+                    <div class="text-[10px] font-mono text-slate-400 uppercase">
+                        Provisioning Engine
+                    </div>
+
+                    <div class="text-sm font-bold text-white font-mono">
+                        Terraform (IaC)
+                    </div>
+
+                    <div class="text-[10px] font-mono text-cyan-400">
+                        Infrastructure Managed
+                    </div>
                 </div>
+
             </div>
 
-            <!-- Metric 4: CI/CD Pipeline Status -->
+
+            <!-- CARD 4: CODEBUILD -->
             <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+
                 <div class="p-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400">
-                <i class="fa-solid fa-circle-check text-xl"></i>
+                    <i class="fa-solid fa-circle-check text-xl"></i>
                 </div>
+
                 <div>
-                <div class="text-[10px] font-mono text-slate-400 uppercase">Pipeline Status</div>
-                <div class="text-sm font-bold text-white font-mono">CodePipeline</div>
-                <div class="text-[10px] font-mono text-emerald-400">Auto-Sync Active</div>
-                </div>
-            </div>
+                    <div class="text-[10px] font-mono text-slate-400 uppercase">
+                        CI/CD Automation
+                    </div>
 
-            </div>
+                    <div class="text-sm font-bold text-white font-mono">
+                        AWS CodeBuild
+                    </div>
 
-            <!-- Live Architecture Workflow Map -->
-            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
-            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-                <div class="flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="text-xs font-mono text-white font-bold uppercase tracking-wider">Automated Deployment Workflow</span>
-                </div>
-                <span class="text-xs font-mono text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Region: us-east-1</span>
-            </div>
-
-            <!-- Step-by-Step Flow Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 font-mono text-xs text-center items-center">
-                
-                <!-- Step 1 -->
-                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
-                <span class="text-amber-500 font-bold text-[10px] mb-1">01. SOURCE</span>
-                <span class="text-white font-bold">AWS CodeCommit</span>
-                <span class="text-[10px] text-slate-500 mt-1">Git Repository</span>
+                    <div class="text-[10px] font-mono text-emerald-400">
+                        GitHub Webhook Enabled
+                    </div>
                 </div>
 
-                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
-
-                <!-- Step 2 -->
-                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
-                <span class="text-amber-500 font-bold text-[10px] mb-1">02. TRIGGER</span>
-                <span class="text-white font-bold">AWS CodePipeline</span>
-                <span class="text-[10px] text-slate-500 mt-1">Auto Orchestration</span>
-                </div>
-
-                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
-
-                <!-- Step 3 -->
-                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
-                <span class="text-amber-500 font-bold text-[10px] mb-1">03. BUILD</span>
-                <span class="text-white font-bold">AWS CodeBuild</span>
-                <span class="text-[10px] text-slate-500 mt-1">Docker Image Build</span>
-                </div>
-
-            </div>
-
-            <!-- Arrow Down -->
-            <div class="my-3 text-center text-cyan-400 text-lg">⬇</div>
-
-            <!-- Bottom Row -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-xs text-center items-center max-w-2xl mx-auto">
-                
-                <!-- Step 4 -->
-                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
-                <span class="text-amber-500 font-bold text-[10px] mb-1">04. REGISTRY</span>
-                <span class="text-white font-bold">Amazon ECR</span>
-                <span class="text-[10px] text-slate-500 mt-1">Image Tagging & Scan</span>
-                </div>
-
-                <div class="hidden md:block text-cyan-400 text-lg">➔</div>
-
-                <!-- Step 5 -->
-                <div class="p-4 bg-slate-950 rounded-xl border border-amber-500/40 bg-amber-500/5 flex flex-col items-center shadow-lg shadow-amber-500/5">
-                <span class="text-amber-400 font-bold text-[10px] mb-1">05. DEPLOY</span>
-                <span class="text-amber-300 font-bold">AWS EC2 Server</span>
-                <span class="text-[10px] text-amber-400/80 mt-1">Auto Pull & Run Port 80</span>
-                </div>
-
-            </div>
             </div>
 
         </div>
-        </section>
+
+
+        <!-- ========================================== -->
+        <!-- AUTOMATED DEPLOYMENT WORKFLOW             -->
+        <!-- ========================================== -->
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+
+
+            <!-- WORKFLOW HEADER -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800">
+
+                <div class="flex items-center space-x-2">
+
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+
+                    <span class="text-xs font-mono text-white font-bold uppercase tracking-wider">
+                        Automated CI/CD Deployment Workflow
+                    </span>
+
+                </div>
+
+                <span class="text-xs font-mono text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                    Region: us-east-1
+                </span>
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- FIRST ROW: SOURCE → TRIGGER → BUILD        -->
+            <!-- ========================================== -->
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 font-mono text-xs text-center items-center">
+
+
+                <!-- STEP 1: GITHUB -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+
+                    <span class="text-amber-500 font-bold text-[10px] mb-1">
+                        01. SOURCE
+                    </span>
+
+                    <span class="text-white font-bold">
+                        GitHub
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        Push to Main Branch
+                    </span>
+
+                </div>
+
+
+                <!-- ARROW -->
+                <div class="text-cyan-400 text-lg rotate-90 md:rotate-0">
+                    ➔
+                </div>
+
+
+                <!-- STEP 2: WEBHOOK -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+
+                    <span class="text-amber-500 font-bold text-[10px] mb-1">
+                        02. TRIGGER
+                    </span>
+
+                    <span class="text-white font-bold">
+                        GitHub Webhook
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        Automatic Build Trigger
+                    </span>
+
+                </div>
+
+
+                <!-- ARROW -->
+                <div class="text-cyan-400 text-lg rotate-90 md:rotate-0">
+                    ➔
+                </div>
+
+
+                <!-- STEP 3: CODEBUILD -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+
+                    <span class="text-amber-500 font-bold text-[10px] mb-1">
+                        03. BUILD
+                    </span>
+
+                    <span class="text-white font-bold">
+                        AWS CodeBuild
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        Docker Build &amp; Push
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOWN ARROW -->
+            <div class="my-4 flex justify-center text-cyan-400 text-xl">
+                ↓
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- SECOND ROW: ECR → SSM → EC2                -->
+            <!-- ========================================== -->
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 font-mono text-xs text-center items-center">
+
+
+                <!-- STEP 4: ECR -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+
+                    <span class="text-amber-500 font-bold text-[10px] mb-1">
+                        04. REGISTRY
+                    </span>
+
+                    <span class="text-white font-bold">
+                        Amazon ECR
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        Docker Image Storage
+                    </span>
+
+                </div>
+
+
+                <!-- ARROW -->
+                <div class="text-cyan-400 text-lg rotate-90 md:rotate-0">
+                    ➔
+                </div>
+
+
+                <!-- STEP 5: SSM -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center">
+
+                    <span class="text-amber-500 font-bold text-[10px] mb-1">
+                        05. AUTOMATION
+                    </span>
+
+                    <span class="text-white font-bold">
+                        AWS Systems Manager
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        SSM Run Command
+                    </span>
+
+                </div>
+
+
+                <!-- ARROW -->
+                <div class="text-cyan-400 text-lg rotate-90 md:rotate-0">
+                    ➔
+                </div>
+
+
+                <!-- STEP 6: EC2 -->
+                <div class="p-4 bg-slate-950 rounded-xl border border-amber-500/40 flex flex-col items-center shadow-lg shadow-amber-500/5">
+
+                    <span class="text-amber-400 font-bold text-[10px] mb-1">
+                        06. DEPLOY
+                    </span>
+
+                    <span class="text-amber-300 font-bold">
+                        EC2 + Docker
+                    </span>
+
+                    <span class="text-[10px] text-amber-400/80 mt-1">
+                        Pull &amp; Run Container
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOWN ARROW -->
+            <div class="my-4 flex justify-center text-cyan-400 text-xl">
+                ↓
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- FINAL ROW: LIVE WEBSITE                   -->
+            <!-- ========================================== -->
+
+            <div class="flex justify-center">
+
+                <div class="w-full md:max-w-md p-4 bg-slate-950 rounded-xl border border-emerald-500/30 flex flex-col items-center text-center font-mono text-xs">
+
+                    <span class="text-emerald-400 font-bold text-[10px] mb-1">
+                        07. LIVE WEBSITE
+                    </span>
+
+                    <span class="text-white font-bold">
+                        Nginx + HTTPS
+                    </span>
+
+                    <span class="text-[10px] text-slate-500 mt-1">
+                        Reverse Proxy • Let's Encrypt SSL
+                    </span>
+
+                    <a href="https://mohanad-portfolio.click"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-cyan-400 hover:text-cyan-300 text-xs mt-3 underline underline-offset-4">
+
+                        mohanad-portfolio.click ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- INFRASTRUCTURE TECHNOLOGIES               -->
+            <!-- ========================================== -->
+
+            <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-center gap-3 text-[10px] font-mono text-slate-400">
+
+                <span class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-lg">
+                    Terraform IaC
+                </span>
+
+                <span class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-lg">
+                    Amazon Linux 2023
+                </span>
+
+                <span class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-lg">
+                    Route 53 DNS
+                </span>
+
+                <span class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-lg">
+                    IAM Roles
+                </span>
+
+                <span class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-lg">
+                    No SSH Required
+                </span>
+
+            </div>
+
+        </div>
+        <!-- END WORKFLOW PANEL -->
+
+    </div>
+    <!-- END MAX-WIDTH CONTAINER -->
+
+</section>
+<!-- END AWS INFRASTRUCTURE SECTION -->
+
 
         <!-- Contact Section -->
         <!-- // GET IN TOUCH / CONTACT SECTION -->
